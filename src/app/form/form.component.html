@@ -1,0 +1,25 @@
+<h2 mat-dialog-title class="align-item">Add Book</h2>
+
+<mat-dialog-content class="content">
+
+    <form [formGroup]="bookForm">
+        <input type="file" name="file" id="file" formControlName="imageUrl" class="upload-file-margin">
+        <mat-form-field>
+            <mat-label for="title">Title</mat-label>
+            <input matInput formControlName="title" id="title">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Purchase Link</mat-label>
+            <input matInput formControlName="purchaseLink">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Publish Date</mat-label>
+            <input matInput formControlName="PublishDate">
+        </mat-form-field>
+    </form>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="save()">Save</button>
+</mat-dialog-actions>
